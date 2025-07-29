@@ -1,18 +1,43 @@
 .barra-busqueda {
-  padding: 1rem 2rem;
   display: flex;
   gap: 1rem;
-  background: #f1f1f1;
-  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+  background: #111; /* fondo oscuro */
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
 }
 
 .barra-busqueda input {
   flex: 1;
-  padding: 0.5rem;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.barra-busqueda input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff55;
 }
 
 .barra-busqueda button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #00ffff, #8e2de2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.barra-busqueda button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffffaa;
 }
