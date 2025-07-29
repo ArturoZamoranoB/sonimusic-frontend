@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "./Components/Layout";
 import Inicio from "./pages/Inicio";
 import Canciones from "./pages/Canciones";
 import CancionesPorArtista from "./pages/CacionesPorArtistas";
