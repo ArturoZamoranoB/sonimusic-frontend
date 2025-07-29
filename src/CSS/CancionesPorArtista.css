@@ -1,0 +1,99 @@
+/* ---------- REGLAS GLOBALES ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden !important;
+  font-family: sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* ---------- LAYOUT GENERAL ---------- */
+.layout {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ---------- SECCIÓN CATÁLOGO ---------- */
+.catalogo {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+/* ---------- SECCIÓN FAVORITOS ---------- */
+.favoritos {
+  width: 200px;
+  padding: 1rem;
+  background-color: #000;
+  border-right: 1px solid #333;
+  overflow-x: hidden;
+}
+
+/* ---------- BLOQUES DE ARTISTAS Y CANCIONES ---------- */
+.bloque-artista {
+  margin-bottom: 3rem;
+}
+
+.bloque-artista h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem; 
+  color: #fff;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+ 
+
+
+/* ---------- GRILLA DE CANCIONES ---------- */
+.grid-canciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+   margin-bottom: 1rem; 
+}
+
+
+.card-cancion {
+  background-color: #181818;
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #eee;
+  transition: transform 0.2s;
+}
+
+.card-cancion:hover {
+  transform: scale(1.03);
+  background-color: #222;
+}
+
+.card-cancion img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- IMÁGENES GENERALES ---------- */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

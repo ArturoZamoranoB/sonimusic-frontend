@@ -1,0 +1,18 @@
+.barra-busqueda {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+.barra-busqueda input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.barra-busqueda button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

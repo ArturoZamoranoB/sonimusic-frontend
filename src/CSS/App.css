@@ -1,0 +1,213 @@
+/* RESET GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* NAVIGATION */
+.menu {
+  width: 100%;
+  background-color: #1e1e2f;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow-x: hidden;
+}
+
+.menu-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff4081;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.favoritos {
+  width: 250px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #333;
+}
+
+.catalogo {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #181818;
+}
+
+/* CARDS */
+.grid-canciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.card-cancion {
+  background-color: #242424;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+}
+
+.card-cancion:hover {
+  background-color: #333;
+}
+
+.card-cancion img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-cancion h4,
+.card-cancion p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #ddd;
+  text-align: center;
+}
+
+.card-cancion .estrella {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #f50909;
+  z-index: 2;
+}
+
+.card-cancion .estrella.fav {
+  color: rgb(24, 24, 22);
+}
+
+/* OTROS COMPONENTES */
+.ContenedorPrincipal {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.SubContenedor {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #2b2b3c;
+}
+
+.song-info h2 {
+  font-size: 24px;
+}
+
+.artist,
+.artist2,
+.now-playing {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-container input[type="range"] {
+  flex: 1;
+  height: 10px;
+  background: #666;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.5);
+}
+
+.cerrar {
+  margin-left: 400px;
+}
