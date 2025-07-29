@@ -1,4 +1,47 @@
-.barra-busqueda {
+.menu {
+  background: #1e1e2f;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.menu-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.menu-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-links li a:hover {
+  color: #00ffff;
+}
+
+.barra-busqueda,
+.espacio-vacio {
   width: 100%;
   max-width: 300px;
   padding: 0.6rem 1rem;
@@ -9,8 +52,6 @@
   border-radius: 10px;
   outline: none;
   transition: 0.3s ease all;
-  margin-left: auto;
-  margin-right: 2rem;
   box-shadow: 0 0 5px #00ffff55;
 }
 
@@ -21,4 +62,8 @@
 .barra-busqueda:focus {
   border-color: #00ffff;
   box-shadow: 0 0 10px #00ffffaa;
+}
+
+.espacio-vacio {
+  visibility: hidden;
 }
