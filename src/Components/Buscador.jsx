@@ -13,7 +13,7 @@ const Buscador = () => {
   useEffect(() => {
     const buscar = async () => {
       if (!query.trim()) return;
-      const res = await fetch(`http://localhost:3001/api/buscar?q=${query}`);
+      const res = await fetch(`https://sonimusic-backend-production.up.railway.app/api/buscar?q=${query}`);
       const data = await res.json();
       setResultados(data);
     };

@@ -12,7 +12,7 @@ const Reproductor = ({ cancion, onClose, listaCanciones, setCancionActual }) => 
   useEffect(() => {
     const fetchPreview = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/api/preview/${cancion.deezerId}`);
+        const res = await fetch(`https://sonimusic-backend-production.up.railway.app/api/preview/${cancion.deezerId}`);
         const data = await res.json();
         setPreviewUrl(data.preview);
       } catch (err) {

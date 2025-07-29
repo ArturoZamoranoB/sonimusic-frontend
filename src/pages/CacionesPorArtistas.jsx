@@ -12,7 +12,7 @@ const Artistas = () => {
   // ✅ Cargar todas las canciones desde la base de datos
   useEffect(() => {
     const fetchCanciones = async () => {
-      const res = await fetch("http://localhost:3001/api/canciones");
+      const res = await fetch("https://sonimusic-backend-production.up.railway.app/api/canciones");
       const data = await res.json();
 
       setTodas(data); // ← aquí guardas todas las canciones
