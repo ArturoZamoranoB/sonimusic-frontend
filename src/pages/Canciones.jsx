@@ -6,7 +6,7 @@ const Canciones = () => {
   const [canciones, setCanciones] = useState([]);
   const [favoritos, setFavoritos] = useState(new Set());
   const [cancionActual, setCancionActual] = useState(null);
-  const { busqueda } = useOutletContext(); // Recibe la búsqueda global
+  const { busqueda } = useOutletContext(); 
 
   useEffect(() => {
     const fetchCanciones = async () => {

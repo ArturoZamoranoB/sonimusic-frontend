@@ -8,7 +8,7 @@ const Reproductor = ({ cancion, onClose, listaCanciones, setCancionActual }) => 
   const [isPlaying, setIsPlaying] = useState(false);
   const [previewUrl, setPreviewUrl] = useState(null);
 
-  // 🔁 Obtener el preview actualizado al cambiar de canción
+
   useEffect(() => {
     const fetchPreview = async () => {
       try {
@@ -24,7 +24,7 @@ const Reproductor = ({ cancion, onClose, listaCanciones, setCancionActual }) => 
     fetchPreview();
   }, [cancion]);
 
-  // 🎵 Reproducir audio cuando esté listo
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !previewUrl) return;

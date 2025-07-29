@@ -1,4 +1,3 @@
-// src/Components/BarraBusqueda.jsx
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../CSS/Barra.css";
@@ -13,7 +12,7 @@ const BarraBusqueda = () => {
     navigate(`/buscar?q=${encodeURIComponent(query)}`);
   };
 
-  // Mostrar solo en /canciones o /artistas
+  
   const rutaActual = location.pathname;
   if (!rutaActual.startsWith("/canciones") && !rutaActual.startsWith("/artistas")) {
     return null;

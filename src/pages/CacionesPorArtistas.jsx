@@ -5,22 +5,21 @@ import { useOutletContext } from "react-router-dom";
 
 const Artistas = () => {
   const { busqueda } = useOutletContext();
-  const [todas, setTodas] = useState([]); // aquí se guardan todas las canciones sin filtrar
+  const [todas, setTodas] = useState([]);
   const [agrupadas, setAgrupadas] = useState({});
   const [cancionActual, setCancionActual] = useState(null);
 
-  // ✅ Cargar todas las canciones desde la base de datos
-  useEffect(() => {
+ useEffect(() => {
     const fetchCanciones = async () => {
       const res = await fetch("https://sonimusic-backend-production.up.railway.app/api/canciones");
       const data = await res.json();
 
-      setTodas(data); // ← aquí guardas todas las canciones
+      setTodas(data); 
     };
     fetchCanciones();
   }, []);
 
-  // ✅ Filtrar y agrupar por artista según la búsqueda
+
   useEffect(() => {
     const agrupadasPorArtista = {};
     todas
